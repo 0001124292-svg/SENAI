@@ -9,7 +9,7 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Smart Soil</title>
+<title>agro monitor</title>
 
 <style>
 
@@ -1519,7 +1519,7 @@ body{
 </div>
 
 <h1>
-Smart Soil
+Agro Monitor
 </h1>
 
 <p>
