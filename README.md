@@ -3990,6 +3990,3 @@ if("serial" in navigator){
 </body>
 
 </html>
-apps-fileview.texmex_20260805.11_p1
-index.html
-Exibindo index.html…
