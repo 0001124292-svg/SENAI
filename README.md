@@ -9,7 +9,7 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>agro monitor</title>
+<title>Agro Monitor</title>
 
 <style>
 
@@ -1499,6 +1499,130 @@ body{
 
 </style>
 
+
+<style id="agro-monitor-aesthetic">
+:root{
+--am-bg:#031a0d;--am-panel:rgba(7,45,27,.64);--am-border:rgba(67,225,116,.20);
+--am-border-hover:rgba(67,225,116,.48);--am-green:#35e878;--am-text:#f3f8f4;--am-muted:#91a99b;
+}
+html{background:var(--am-bg)}
+body{
+position:relative;overflow-x:hidden;color:var(--am-text);
+background:radial-gradient(circle at 82% 42%,rgba(34,144,76,.23),transparent 31%),
+radial-gradient(circle at 13% 83%,rgba(20,112,57,.18),transparent 27%),
+linear-gradient(135deg,#02150a 0%,#062719 52%,#03160d 100%);
+}
+body::before{
+content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.14;
+background-image:radial-gradient(circle,rgba(56,220,110,.35) 0 1.5px,transparent 2px);
+background-size:38px 38px;mask-image:linear-gradient(to bottom,transparent,black 25%,black 80%,transparent);
+}
+#inicio{position:relative;align-items:flex-start;padding-top:18px;overflow:hidden}
+#inicio::after{
+content:"";position:absolute;right:-8%;bottom:-14%;width:54%;height:58%;pointer-events:none;opacity:.15;
+background:repeating-linear-gradient(164deg,transparent 0 18px,rgba(58,176,76,.62) 19px 21px),
+linear-gradient(160deg,transparent 0 43%,rgba(18,86,43,.9) 44% 100%);
+transform:perspective(700px) rotateX(10deg);
+}
+.senai-brand{
+position:absolute;z-index:4;top:15px;left:50%;transform:translateX(-50%);
+width:min(125px,25vw);height:54px;display:flex;align-items:center;justify-content:center;
+}
+.senai-brand::after{
+content:"";position:absolute;top:61px;left:50%;transform:translateX(-50%);
+width:68vw;max-width:900px;height:2px;
+background:linear-gradient(90deg,transparent,rgba(220,230,225,.48),transparent);
+}
+.senai-brand img{width:100%;height:auto;display:block;object-fit:contain}
+.inicio{position:relative;z-index:2;max-width:820px;padding-top:112px}
+.logo{
+width:118px;height:118px;margin:0 auto 20px;border-radius:30px;font-size:58px;
+background:linear-gradient(145deg,#10b866,#063d25);
+box-shadow:0 0 45px rgba(20,220,100,.16),inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.inicio h1{font-size:62px;line-height:1;font-weight:800;letter-spacing:-2px;margin-bottom:0}
+.inicio p{font-size:21px;color:#dfe9e2;margin:22px auto 35px}
+.menu{gap:14px}
+.menu-barra{
+min-height:112px;padding:22px 25px;border-radius:24px;
+background:linear-gradient(100deg,rgba(8,51,30,.76),rgba(6,37,24,.55));
+border:1px solid var(--am-border);box-shadow:0 12px 35px rgba(0,0,0,.15);
+}
+.menu-barra:hover{
+transform:translateY(-3px);
+background:linear-gradient(100deg,rgba(10,68,38,.82),rgba(7,45,27,.66));
+border-color:var(--am-border-hover);box-shadow:0 16px 40px rgba(20,220,90,.10);
+}
+.menu-icone{width:64px;height:64px;border-radius:19px;font-size:30px;background:rgba(5,125,59,.35)}
+.menu-conteudo h2{font-size:21px;margin-bottom:10px}
+.menu-conteudo span{color:#94a99d;font-size:14px}
+.seta{font-size:34px;color:var(--am-green)}
+.tela:not(#inicio){position:relative;z-index:1;padding:28px 20px;align-items:flex-start}
+.container{max-width:1120px}.medidor-container{max-width:1400px}
+.topo{margin-bottom:22px}.titulo{font-size:28px;letter-spacing:-.4px}
+.voltar{
+padding:11px 17px;border-radius:13px;background:rgba(255,255,255,.055);
+border:1px solid rgba(255,255,255,.08)
+}
+.voltar:hover{background:rgba(25,180,88,.13);border-color:var(--am-border)}
+.card,.conexao-arduino,.historico-barra{
+background:linear-gradient(135deg,rgba(8,51,30,.68),rgba(5,30,19,.62));
+border:1px solid var(--am-border);box-shadow:0 15px 45px rgba(0,0,0,.16);
+backdrop-filter:blur(16px)
+}
+.conexao-arduino{padding:17px 20px;border-radius:19px}
+.botao-arduino,.botao-config{
+background:rgba(19,184,91,.17);border:1px solid rgba(53,232,120,.30);
+color:white;border-radius:12px;transition:.2s ease
+}
+.botao-arduino:hover,.botao-config:hover{
+background:rgba(19,184,91,.30);border-color:rgba(53,232,120,.52);transform:translateY(-1px)
+}
+.card{border-radius:26px}
+.sensor-panel{min-height:585px}
+.sensor-heading{margin-bottom:14px}.sensor-heading h2{font-size:23px}.sensor-heading p{color:#8fa79a}
+.meter{
+background:conic-gradient(var(--am-green) 0deg,var(--am-green) 180deg,rgba(255,255,255,.06) 180deg);
+box-shadow:0 0 50px rgba(36,220,100,.08)
+}
+.meter::before{background:radial-gradient(circle,#102d1c,#04150b)}
+.barra{background:rgba(255,255,255,.065)}
+.barra-progresso{background:linear-gradient(90deg,#16b95d,#4eea7c)}
+.temperatura-meter{
+background:conic-gradient(from 225deg,#ff7a00 0deg,#ff9f1c 230deg,rgba(255,255,255,.06) 230deg,rgba(255,255,255,.06) 270deg,transparent 270deg 360deg)
+}
+.temperatura-meter::before{background:#061a10}
+.temp-chart-box{border-color:rgba(67,225,116,.14);background:rgba(255,255,255,.025)}
+.analises-card{background:linear-gradient(135deg,rgba(7,49,28,.72),rgba(5,30,19,.64))}
+.info{background:rgba(255,255,255,.035);border-color:rgba(67,225,116,.10);transition:.2s}
+.info:hover{border-color:rgba(67,225,116,.27);background:rgba(20,100,55,.10)}
+.dica{background:rgba(255,255,255,.035);border-color:rgba(67,225,116,.11)}
+.config-card{padding:30px}
+.config-item{
+background:rgba(255,255,255,.025);border:1px solid rgba(67,225,116,.10);
+border-radius:20px;padding:22px;margin-bottom:16px
+}
+.config-item:last-child{margin-bottom:0}
+.config-item h3{font-size:19px;margin-bottom:8px}.config-item p{color:#91a79a}
+.config-input,.config-select{
+background:#071e12;color:white;border:1px solid rgba(67,225,116,.20);border-radius:11px
+}
+.config-input:focus,.config-select:focus{
+outline:none;border-color:rgba(53,232,120,.60);box-shadow:0 0 0 3px rgba(53,232,120,.08)
+}
+.historico-layout{gap:18px}
+.historico-barra{border-radius:24px;padding:25px}
+.historico-barra-titulo h2{font-size:21px}
+.historico-barra-titulo p,.historico-atualizacao{color:#91a79a}
+.historico-item{background:rgba(255,255,255,.035);border:1px solid rgba(67,225,116,.09);border-radius:14px}
+@media(max-width:800px){.inicio{padding-top:102px}.inicio h1{font-size:45px}.senai-brand{width:105px}}
+@media(max-width:520px){
+#inicio{padding-left:12px;padding-right:12px}.inicio{padding-top:90px}.logo{width:90px;height:90px;font-size:44px}
+.inicio h1{font-size:40px}.inicio p{font-size:17px}.menu-barra{min-height:96px;padding:18px}
+.menu-icone{width:54px;height:54px;flex-basis:54px}.senai-brand::after{width:88vw}
+}
+</style>
+
 </head>
 
 <body>
@@ -1511,6 +1635,10 @@ body{
 <section
     id="inicio"
     class="tela ativa">
+
+<div class="senai-brand">
+    <img src="senai.png" alt="SENAI">
+</div>
 
 <div class="inicio">
 
@@ -3862,3 +3990,6 @@ if("serial" in navigator){
 </body>
 
 </html>
+apps-fileview.texmex_20260805.11_p1
+index.html
+Exibindo index.html…
